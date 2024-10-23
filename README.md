@@ -1,1 +1,5 @@
 # BART-NLP
+In the era of information overload, it has become crucial to extract the crux of a long document or a conversation and express it in a few sentences. Owing to the fact that summarization has widespread applications in different domains, it has become a key, well-studied NLP task in recent years.
+
+Bidirectional Autoregressive Transformer (BART) is a Transformer-based encoder-decoder model, often used for sequence-to-sequence tasks like summarization and neural machine translation. BART is pre-trained in a self-supervised fashion on a large text corpus. During pre-training, the text is corrupted and BART is trained to reconstruct the original text (hence called a "denoising autoencoder"). Some pre-training tasks include token masking, token deletion, sentence permutation (shuffle sentences and train BART to fix the order), etc.
+Here I will demonstrate how to fine-tune BART on the abstractive summarization task (on conversations!) using KerasNLP, and generate summaries using the fine-tuned model.
